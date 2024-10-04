@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Boat Booking</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Admin Panel</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Manage Bookings</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Manage Boats</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    
+    <div class="container mt-5">
+        <h1 class="text-center">Admin Dashboard</h1>
+
+        
+        <div class="mt-5">
+            <h3>Manage Boats</h3>
+            <form class="row g-3">
+                <div class="col-md-4">
+                    <label for="boatName" class="form-label">Boat Name</label>
+                    <input type="text" class="form-control" id="boatName" placeholder="Enter boat name">
+                </div>
+                <div class="col-md-4">
+                    <label for="capacity" class="form-label">Capacity</label>
+                    <input type="number" class="form-control" id="capacity" min="1" placeholder="Enter capacity">
+                </div>
+                <div class="col-md-4">
+                    <label for="schedule" class="form-label">Schedule</label>
+                    <input type="text" class="form-control" id="schedule" placeholder="Enter schedule (e.g., 9:00 AM)">
+                </div>
+                <div class="col-12">
+                    <button type="submit" class="btn btn-success">Add Boat</button>
+                </div>
+            </form>
+
+        
+            <div class="mt-4">
+                <h4>Available Boats</h4>
+                <ul class="list-group">
+                    <!-- Boats will be listed here -->
+                </ul>
+            </div>
+        </div>
+
+        
+        <div class="mt-5">
+            <h3>Manage Bookings</h3>
+            <ul class="list-group">
+            
+                <li class="list-group-item">
+                    <strong>Booking ID:</strong> 12345 | <strong>Name:</strong> John Doe | <strong>Passengers:</strong> 2
+                    <button class="btn btn-danger btn-sm float-end">Cancel</button>
+                </li>
+            
+            </ul>
+        </div>
+    </div>
+
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
