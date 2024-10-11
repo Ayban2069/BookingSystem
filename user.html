@@ -75,16 +75,17 @@
         <form class="row g-3" id="booking-form">
             <div class="col-md-6">
                 <label for="port" class="form-label">From:</label><br>
-                <select id="port" name="Departure Location" class="form-control">
+                <select required id="port" name="Departure Location" class="form-control">
                     <option value="Tagbilaran Port">Tagbilaran Port</option>
                     <option value="Jagna Port">Jagna Port</option>
                     <option value="Ubay Port">Ubay Port</option>
                     <option value="Tubigon Port">Tubigon Port</option>
+                    <option value="Getafe Port">Getafe Port</option>
                 </select>
             </div>
             <div class="col-md-6">
                 <label for="destination" class="form-label">To:</label>
-                <select name="destination" id="destination" class="form-control">
+                <select required name="destination" id="destination" class="form-control">
                     <option value="Cebu">Cebu</option>
                     <option value="Manila">Manila</option>
                     <option value="Cagayan de Oro">Cagayan de Oro</option>
@@ -94,8 +95,8 @@
                 </select>
             </div>
             <div class="col-md-6">
-                <label for="boat" id="boat" class="form-label">Select a Ferry</label>
-                <select name="boat" id="boat" class="form-control">
+                <label for="boat"  class="form-label">Select a Ferry</label>
+                <select required name="boat" id="boat" class="form-control">
                     <option value="2go">2go</option>
                     <option value="OceanJet">OceanJet</option>
                     <option value="FastCat">FastCat</option>
@@ -106,11 +107,11 @@
             
             <div class="col-md-6">
                 <label for="date" class="form-label">Date</label>
-                <input type="date" class="form-control" id="date">
+                <input required type="date" class="form-control" id="date">
             </div>
             <div class="col-md-6">
                 <label for="numPassengers" class="form-label">Number of Passengers</label>
-                <input type="number" class="form-control" id="numPassengers" min="1">
+                <input required type="number" class="form-control" id="numPassengers" min="1">
             </div>
             <button type="button" id="book-btn" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 Book now
