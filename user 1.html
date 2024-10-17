@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boat Booking System</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-primary-subtle ">    
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary nav">
+        <div class="container-fluid">
+            <a class="navbar-brand text-light" href="#">Boat Booking</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#">Bookings</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<button type="button"  class="bttn">
+  <span>Book Now</span>
+  <svg 
+    color="white"
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 74 74"
+    height="30"
+    width="30"
+  >
+    <circle stroke-width="3" stroke="white" r="35.5" cy="37" cx="37"></circle>
+    <path
+      fill="white"
+      d="M25 35.5C24.1716 35.5 23.5 36.1716 23.5 37C23.5 37.8284 24.1716 38.5 25 38.5V35.5ZM49.0607 38.0607C49.6464 37.4749 49.6464 36.5251 49.0607 35.9393L39.5147 26.3934C38.9289 25.8076 37.9792 25.8076 37.3934 26.3934C36.8076 26.9792 36.8076 27.9289 37.3934 28.5147L45.8787 37L37.3934 45.4853C36.8076 46.0711 36.8076 47.0208 37.3934 47.6066C37.9792 48.1924 38.9289 48.1924 39.5147 47.6066L49.0607 38.0607ZM25 38.5L48 38.5V35.5L25 35.5V38.5Z"
+    ></path>
+  </svg>
+</button>
+
+<div id="carouselExample" class="carousel slide">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="images/65b45dbf-785f-4c4f-bcf4-f9415cabaff7.jpeg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="images/8efff153-8c7a-4832-93ba-ee5a2cd08d0e.jpeg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="images/9c1f4303-f374-4850-80aa-d40c4dc42e9b.jpeg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="images/f2c8d2b0-b363-4109-9f28-2e964a46847f.jpeg" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+    <div class="container mt-5 d-grid">
+        <h1 class="text-center" id="book">Online Booking</h1>
+        <form class="row g-3" id="booking-form">
+            <div class="col-md-6">
+                <label for="port" class="form-label">From:</label><br>
+                <select required id="port" name="Departure Location" class="form-control">
+                    <option value="Tagbilaran Port">Tagbilaran Port</option>
+                    <option value="Jagna Port">Jagna Port</option>
+                    <option value="Ubay Port">Ubay Port</option>
+                    <option value="Tubigon Port">Tubigon Port</option>
+                    <option value="Getafe Port">Getafe Port</option>
+                </select>
+            </div>
+            <div class="col-md-6">
+                <label for="destination" class="form-label">To:</label>
+                <select required name="destination" id="destination" class="form-control">
+                    <option value="Cebu">Cebu</option>
+                    <option value="Manila">Manila</option>
+                    <option value="Cagayan de Oro">Davao</option>
+                    <option value="Mindanao">Mindanao</option>
+                    <option value="Camiguin">Siquijor</option>
+                    <option value="Leyte">Leyte</option>
+                </select>
+            </div>
+            <div class="col-md-6">
+                <label for="boat"  class="form-label">Select a Ferry</label>
+                <select required name="boat" id="boat" class="form-control">
+                    <option value="2go">2go</option>
+                    <option value="OceanJet">OceanJet</option>
+                    <option value="FastCat">FastCat</option>
+                    <option value="SuperCat">SuperCat</option>
+                    <option value="Starlite Ferries">Starlite Ferries</option>
+                </select>
+            </div>
+            
+            <div class="col-md-6">
+                <label for="date" class="form-label">Date</label>
+                <input required type="date" class="form-control" id="date">
+            </div>
+            <div class="col-md-6">
+                <label for="numPassengers" class="form-label">Number of Passengers</label>
+                <input required type="number" class="form-control" id="numPassengers" min="1">
+            </div>
+            <button type="button" id="book-btn" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Book now
+              </button>
+        </form>
+
+        
+        </div>
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">Confirm your Booking</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="modal-body">
+                  <!-- Receipt content will be inserted here -->
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+                  <button type="button" class="btn btn-success">Confirm?</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+    <script>
+      document.getElementById('book-btn').addEventListener('click', function() {
+         
+          const port = document.getElementById('port').value;
+          const destination = document.getElementById('destination').value;
+          const boat = document.getElementById('boat').value;
+          const date = document.getElementById('date').value;
+          const numPassengers = document.getElementById('numPassengers').value;
+          let fare = 0; 
+           
+          switch (destination) {
+              case 'Cebu':
+                  fare += 700*numPassengers;
+              break;
+              case 'Manila':
+                  fare += 1000*numPassengers;
+              break;
+              case 'Cagayan de Oro':
+              fare += 850 * numPassengers;
+              break;
+              case 'Mindanao':
+              fare += 900 * numPassengers;
+              break;
+              case 'Camiguin':
+              fare += 900 * numPassengers;
+              break;
+              case 'Leyte':
+              fare += 850 * numPassengers;
+              break;
+          }
+         
+          const receipt = `
+            <p><strong>From:</strong> ${port}</p>
+            <p><strong>To:</strong> ${destination}</p>
+            <p><strong>Ferry:</strong> ${boat}</p>
+            <p><strong>Date:</strong> ${date}</p>
+            <p><strong>Number of Passengers:</strong> ${numPassengers}</p>
+            <p><strong>Fare:</strong class="text-success"><span>₱ ${fare}</span></p>
+          `;
+
+          
+          document.getElementById('modal-body').innerHTML = receipt;
+      });
+    </script>
+
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
